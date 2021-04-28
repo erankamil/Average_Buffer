@@ -1,6 +1,6 @@
 # Average_Buffer template class
 
-A AverageBuffer template class (sliding window) that calculates:
+AverageBuffer template class (sliding window) that calculates:
   'Average', 'Average-forever', 'Upper Quarter Average' and 'Lower Quarter Average'.
 - Every time a new sample enters the buffer the oldest sample will be extracted
   from the buffer (if the buffer is full).
