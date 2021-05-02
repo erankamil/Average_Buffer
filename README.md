@@ -1,6 +1,6 @@
-# Average_Buffer template class
+# Average_Buffer class
 
-AverageBuffer template class (sliding window) that calculates:
+I implemented AverageBuffer class (sliding window) that calculates:
   'Average', 'Average-forever', 'Upper Quarter Average' and 'Lower Quarter Average'.
 - Every time a new sample enters the buffer the oldest sample will be extracted
   from the buffer (if the buffer is full).
@@ -9,6 +9,7 @@ AverageBuffer template class (sliding window) that calculates:
  - 'Upper Quarter Average' is the average of the newest 25 samples (if buffer size is currently 100).
  - 'Lower Quarter Average' is the average of the oldest 25 samples (if buffer size is currently 100).
 
+* To avoid overflow calculating the averages, I saved the "Current Average" and the "Dropped elements Average" instead the summary of  the buffer samples and the summary of all samples from the beginning of the run.
 
    For example, if the buffer size is 8 and the last samples are [10,40,30,44,20,50,35,55]:
      'Upper Quarter Average' is the average of [35,55] (the newest two samples).
