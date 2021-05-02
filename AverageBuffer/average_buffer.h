@@ -31,9 +31,9 @@ private:
 		return (pos + 1) % size;
 	}
 
-	size_t lastPos(int pos) const
+	int lastPos(int pos) const
 	{
-		return (pos - 1) % size;
+		return pos - 1;
 	}
 
 	double getWeightedAverage(double avgFirst, size_t countFirst, double avgSecond, size_t countSecond) const
@@ -94,6 +94,8 @@ public:
 		double UpperQuarterAvg = 0;
 		size_t count = windowSize();
 		int currIndex = lastPos(nextPos);
+		if (count == size)
+			currIndex += count;
 		count = QUARTER(count);
 		for (int i = 0; i < count; i++)
 		{
