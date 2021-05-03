@@ -25,8 +25,6 @@ int main()
 		// Adding new sample to the buffer
 		avgBuf.addSample(randNum);
 
-
-
 		myfile << "i = " << i << std::endl;
 		myfile << "randNum = " << randNum << std::endl;
 		myfile << "getAverage = " << avgBuf.getAverage() << std::endl;
