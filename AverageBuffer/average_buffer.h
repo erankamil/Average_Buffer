@@ -94,15 +94,16 @@ public:
 		double UpperQuarterAvg = 0;
 		size_t count = windowSize();
 		int currIndex = lastPos(nextPos);
-		if (count == size && currIndex < 0)
-			currIndex += count;
+		//if (count == size && currIndex < 0)
+		//	currIndex += count;
 		count = QUARTER(count);
 		for (int i = 0; i < count; i++)
 		{
-			UpperQuarterAvg += ((double)buffer[currIndex] / count);
-			currIndex = lastPos(currIndex);
 			if (currIndex < 0)
 				currIndex += size;
+			UpperQuarterAvg += ((double)buffer[currIndex] / count);
+			currIndex = lastPos(currIndex);
+
 		}
 		return UpperQuarterAvg;
 	}
