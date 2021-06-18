@@ -1,6 +1,8 @@
 #include <iostream>
 #define QUARTER(size)  (size_t) (size/4)
 
+// eran kamil //
+
 using namespace std;
 
 template< class T>
