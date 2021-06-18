@@ -3,6 +3,8 @@
 
 using namespace std;
 
+// new comment
+
 template< class T>
 class AverageBuffer
 {
